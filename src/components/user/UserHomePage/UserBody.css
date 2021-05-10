@@ -1,0 +1,35 @@
+.store-list-item{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+.right-store-list{
+    width: 100px;
+    margin-right: 20px;
+}
+
+.right-store-list img{
+    width: 100%;
+}
+
+.store-name{
+    padding-bottom: 20px;
+}
+
+.store-address{
+    padding-bottom: 20px;
+}
+
+.get-product-link{
+    color: black;
+}
+
+.get-product-link:hover{
+    color: #7472EA;
+}

@@ -19,13 +19,12 @@ import CartPage from "./UserCart";
 export default function UserHomePage() {
   const history = useHistory();
   const [stores, setStoresList] = useState([]);
-  const [totalItems, setTotalItems] = useState(0);
   const [chooseStoreId, setChooseStoreId] = useState();
   const [isStore, setIsStore] = useState(true);
   const [isProductPage, setIsProductPage] = useState(false);
   const [isCartPage, setIsCartPage] = useState(false);
   const [currentBtnId, setCurrentBtnId] = useState("btn-1");
-
+  
 
   const numberOfCartItem = useSelector(selectCartItems);
 
@@ -35,9 +34,9 @@ export default function UserHomePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const { stores, totalCount } = await getStores(1);
+      const { stores } = await getStores(1);
       setStoresList(stores);
-      setTotalItems(totalCount);
+     
     }
     fetchData();
   }, []);

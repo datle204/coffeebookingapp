@@ -53,3 +53,7 @@
 .cart-page-detail .right-cart-page button:hover{
     background-color: springgreen;
 }
+
+.cart-payment{
+    margin-bottom: 30px;
+}

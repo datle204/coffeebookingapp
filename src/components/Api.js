@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const apis = axios.create({
-  baseURL: "https://user-coffee-app.herokuapp.com",
+  baseURL: "https://user-coffee.herokuapp.com",
   headers: { Authorization: "token" },
 });
 
-const DOMAIN = "https://user-coffee-app.herokuapp.com";
+const DOMAIN = "https://user-coffee.herokuapp.com";
 const STORE_API = DOMAIN + "/store";
 const PAGE_LIMIT = 3;
 

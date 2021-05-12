@@ -1,35 +1,37 @@
 // import "./UserHomePage.css";
 import "./ProductsPage.css";
 import { useDispatch } from "react-redux";
-import {increasement} from "../../../features/countItemSlice";
+import { increasement } from "../../../features/countItemSlice";
 
 export default function ProductPage({ stores, chooseStoreId }) {
-  
   const dispatch = useDispatch();
 
-  async function addToCart(productId){
-    dispatch(increasement({type: 'increasement', payload: {id: productId}}));
+  async function addToCart(product) {
+    dispatch(increasement(product));
+    
   }
-  
+
   let currentStore = [...stores];
-  let currentStoreProductList = currentStore[chooseStoreId - 1].products;
-  const productsList = currentStoreProductList.map((productList) => (
-    <div className="product" key={productList.id}>
+
+  let index = currentStore.find((storeItem)=> storeItem.id === chooseStoreId);
+  
+  let currentStoreProductList = index.products;
+  
+  
+  
+  const productsList = currentStoreProductList.map((product) => (
+    <div className="product" key={product.id}>
       <div className="product-detail">
-        <p className="product-name">Name: {productList.productName}</p>
-        <p className="product-price">Price: {productList.price}</p>
+        <p className="product-name">Name: {product.productName}</p>
+        <p className="product-price">Price: {product.price}</p>
       </div>
-      <button
-        className="add-to-cart"
-        onClick={() => addToCart(productList.id)}
-      >
+      <button className="add-to-cart" onClick={() => addToCart(product)}>
         Add To Cart
       </button>
     </div>
   ));
 
   return (
-    
     <div className="product-page">
       <div className="current-store">
         <div className="right-store-list">

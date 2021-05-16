@@ -30,9 +30,11 @@ export const countItemSlice = createSlice({
      
       
     },
-    decreasement: (state) => {
-      state.numberItemOfCart -= 1;
+    deleteQty: (state, action) => {
+        state.numberItemOfCart -= 1;
+        state.cart = action.payload.newList;
     },
+
     updateQty: (state, action) => {
       state.cart = state.cart.map((cartItem) => {
         if(cartItem.id === action.payload.id){
@@ -45,7 +47,7 @@ export const countItemSlice = createSlice({
 });
 
 // Export actions
-export const { increasement, decreasement, updateQty } = countItemSlice.actions;
+export const { increasement, deleteQty , updateQty } = countItemSlice.actions;
 
 // Lấy ra state cartItems của cartItemsSlice;
 export const selectCartItems = (state) => state.countItem.numberItemOfCart;

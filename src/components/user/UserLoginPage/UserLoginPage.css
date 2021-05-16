@@ -1,129 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+}
+
+.col-md-8 {
+  padding-right: 0;
+}
+.col-md-4 {
+  padding-right: 0;
+}
 
 .login-page{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 100%;
+  width: 100%;
+ 
 }
 
-.left-side{
-    width: 70%;
-    display: flex;
-    justify-content: center;
+.login-page .row{
+  margin-right: 0;
+  margin-left: 0;
+  height: 100vh;
 }
 
-.left-side .wrap-content{
-    margin-top: 200px;
-    text-align: left;
-    color: white;
-    position: absolute;
-    z-index: 10;
+.left-side .wrap-content {
+  margin: 200px 100px;
+  text-align: left;
+  color: white;
 }
 
-h1.login-page-title{
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+h1.login-page-title {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  padding-top: 20px;
 }
-
-.right-side{
-    width: 30%;
-}
-
 
 /* CSS Login form */
 
 /* Login form */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  a {
-    text-decoration: none;
-  }
-  
-  
-  .login-form{
-      margin-top: 200px;
-  }
-  
-  .input-field {
-    width: 80%;
-    margin: auto;
 
-  }
-
-  h1.title{
-    text-align: center;
-    margin-bottom: 20px ;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.login-form {
+  margin-top: 200px;
 }
-  
-  .input-field input {
-    width: 100%;
-    margin-bottom: 15px;
-    height: 40px;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid gray;
-  }
 
-  .bottom-login{
-      width: 80%;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-      font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.input-field {
+  width: 80%;
+  margin: auto;
+}
 
-  }
-  
-  .check-field {
-    width: 50%;
-    display: flex;
-    align-items: center;
-  }
-  
-  input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .check-field label {
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 16px;
-  }
+h1.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
 
-  button.sign-up{
-      border: none;
-      background-color: white;
-      font-size: 16px;
-      color: blue;
-      padding-right: 10px;
-      text-decoration: underline;
-  }
+.input-field input {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 40px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
 
-  .login-page button.sign-in{
-    width: 120px;
-    display: block;
-    margin: auto;
+.bottom-login {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.check-field {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.check-field label {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+button.sign-up {
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  color: blue;
+  padding-right: 10px;
+  text-decoration: underline;
+}
+
+button.sign-in {
+  width: 120px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #10d210cf;
+  color: black;
+  border: none;
+  font-size: 16px;
+}
+
+button.sign-in:hover {
+  cursor: pointer;
+  background-color: springgreen;
+}
+
+hr{
+  width: 60%;
+  margin: auto;
+}
+
+
+@media screen and (max-width: 767px) {
+  .left-side .wrap-content {
     text-align: center;
-    padding: 12px 20px;
-    border-radius: 5px;
-    background-color: #10d210cf;
-    color: black;
-    border: none;
-    font-size: 16px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
-
-  .login-page button.sign-in:hover{
-    cursor: pointer;
+  .right-side{
+    margin-bottom: 100px;
   }
-
+  .login-form {
+    margin-top: 50px;
+  }
   
+}
